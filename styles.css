@@ -1,0 +1,410 @@
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║  Valentine's Day – Cute-Maximal Stylesheet                  ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+
+/* ─── Reset & base ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --pink:      #f48fb1;
+  --hot-pink:  #e91e63;
+  --lavender:  #ce93d8;
+  --peach:     #ffe0b2;
+  --blush:     #fce4ec;
+  --deep:      #880e4f;
+  --white:     #fff;
+  --card-bg:   rgba(255, 255, 255, 0.18);
+  --font-main: 'Quicksand', 'Nunito', sans-serif;
+  --font-hand: 'Patrick Hand', cursive;
+}
+
+html { font-size: 16px; }
+
+/* ─── Layer 1: Dreamy animated gradient background ─── */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-main);
+  color: var(--deep);
+  overflow: hidden;
+  background: linear-gradient(-45deg, #fce4ec, #f8bbd0, #e1bee7, #f3e5f5, #ffe0b2, #f8bbd0);
+  background-size: 400% 400%;
+  animation: gradientShift 16s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ─── Layer 2: tsParticles container ─── */
+#tsparticles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ─── Layer 3: Corner doodles ─── */
+.corner-doodle {
+  position: fixed;
+  font-size: 2.4rem;
+  z-index: 1;
+  animation: doodleBob 3s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.7;
+}
+.top-left     { top: 18px;  left: 18px;  animation-delay: 0s; }
+.top-right    { top: 18px;  right: 18px; animation-delay: 0.6s; }
+.bottom-left  { bottom: 18px; left: 18px; animation-delay: 1.2s; }
+.bottom-right { bottom: 18px; right: 18px; animation-delay: 1.8s; }
+
+@keyframes doodleBob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25%      { transform: translateY(-8px) rotate(6deg); }
+  75%      { transform: translateY(4px) rotate(-4deg); }
+}
+
+/* ─── Layer 5: Cursor trail container ─── */
+#cursor-trail {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+.trail-particle {
+  position: absolute;
+  pointer-events: none;
+  font-size: 1rem;
+  animation: trailFade 0.8s ease-out forwards;
+  z-index: 2;
+}
+@keyframes trailFade {
+  0%   { opacity: 1; transform: scale(1) translateY(0); }
+  100% { opacity: 0; transform: scale(0.3) translateY(-30px); }
+}
+
+/* ─── Main scene ─── */
+#main-scene {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  animation: sceneIn 1s ease-out both;
+}
+
+@keyframes sceneIn {
+  0%   { opacity: 0; transform: scale(0.85) translateY(30px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ─── Chibi characters ─── */
+.chibi-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.chibi {
+  width: 100px;
+  animation: idleBounce 2s ease-in-out infinite;
+}
+.chibi-ally { animation-delay: 0.4s; }
+
+.chibi-svg { width: 100%; height: auto; display: block; }
+.chibi-svg-wide { width: 220px; height: auto; }
+
+/* Idle bounce */
+@keyframes idleBounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+/* Waving arm */
+.wave-arm {
+  animation: wave 1s ease-in-out infinite alternate;
+}
+@keyframes wave {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(-25deg); }
+}
+
+/* Blink animation on eyes */
+.chibi-eyes {
+  animation: blink 4s ease-in-out infinite;
+}
+@keyframes blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95%           { transform: scaleY(0.1); }
+}
+
+/* Crying chibi: tears drip animation */
+.chibi-crying #you-tears {
+  animation: tearDrip 1.2s ease-in-out infinite;
+}
+@keyframes tearDrip {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50%      { transform: translateY(6px); opacity: 1; }
+}
+
+/* Sobbing chibi: whole body shakes */
+.chibi-sobbing {
+  animation: sob 0.4s ease-in-out infinite !important;
+}
+@keyframes sob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25%      { transform: translateY(-2px) rotate(-2deg); }
+  75%      { transform: translateY(-2px) rotate(2deg); }
+}
+
+/* Float heart above holding-hands */
+.float-heart {
+  animation: floatHeart 1.5s ease-in-out infinite alternate;
+}
+@keyframes floatHeart {
+  0%   { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-10px); opacity: 0.7; }
+}
+
+/* Together scene: slide-in */
+.chibi-together {
+  animation: coupleIn 1s ease-out both;
+}
+@keyframes coupleIn {
+  0%   { opacity: 0; transform: scale(0.6); }
+  60%  { transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ─── Layer 4: Hero card (kawaii glass) ─── */
+.hero-card {
+  position: relative;
+  background: var(--card-bg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 28px;
+  padding: 40px 48px 36px;
+  text-align: center;
+  max-width: 460px;
+  width: 90vw;
+  box-shadow:
+    0 8px 32px rgba(233, 30, 99, 0.18),
+    inset 0 0 60px rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  animation: cardGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes cardGlow {
+  0%   { box-shadow: 0 8px 32px rgba(233, 30, 99, 0.18), inset 0 0 60px rgba(255,255,255,0.12); }
+  100% { box-shadow: 0 8px 48px rgba(233, 30, 99, 0.32), inset 0 0 80px rgba(255,255,255,0.18); }
+}
+
+/* Shimmer sweep across card */
+.shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 60%
+  );
+  animation: shimmerSweep 4s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes shimmerSweep {
+  0%   { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
+}
+
+/* Animated gradient border */
+.hero-card::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, var(--pink), var(--lavender), var(--peach), var(--hot-pink));
+  background-size: 300% 300%;
+  animation: borderGradient 6s ease infinite;
+  z-index: -1;
+}
+@keyframes borderGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ─── Typography ─── */
+.prompt-text {
+  font-family: var(--font-hand);
+  font-size: 2rem;
+  line-height: 1.3;
+  color: var(--deep);
+  margin-bottom: 8px;
+  animation: textPulse 3s ease-in-out infinite;
+}
+@keyframes textPulse {
+  0%, 100% { text-shadow: 0 0 8px rgba(233,30,99,0.15); }
+  50%      { text-shadow: 0 0 18px rgba(233,30,99,0.35); }
+}
+
+.sub-text {
+  font-size: 1rem;
+  color: var(--hot-pink);
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+/* ─── Layer 6: Buttons ─── */
+.button-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.btn {
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 36px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.3s ease;
+  position: relative;
+  outline-offset: 3px;
+}
+.btn:focus-visible {
+  outline: 3px solid var(--deep);
+}
+
+/* Yes button – glossy pink */
+.btn-yes {
+  background: linear-gradient(135deg, #ec407a, #f48fb1);
+  color: var(--white);
+  box-shadow: 0 4px 18px rgba(233, 30, 99, 0.35);
+  animation: yesPulse 2s ease-in-out infinite;
+}
+.btn-yes:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 28px rgba(233, 30, 99, 0.5);
+}
+.btn-yes:active {
+  transform: scale(0.96);
+}
+
+@keyframes yesPulse {
+  0%, 100% { box-shadow: 0 4px 18px rgba(233,30,99,0.35); }
+  50%      { box-shadow: 0 4px 28px rgba(233,30,99,0.55); }
+}
+
+/* No button – soft outline */
+.btn-no {
+  background: rgba(255,255,255,0.6);
+  color: var(--hot-pink);
+  border: 2px solid var(--pink);
+  box-shadow: 0 2px 10px rgba(233, 30, 99, 0.12);
+  /* Will be positioned absolutely when running away */
+}
+.btn-no:hover {
+  background: rgba(255,255,255,0.8);
+}
+
+/* When "No" button is in runaway mode */
+.btn-no.runaway {
+  position: fixed;
+  z-index: 100;
+  transition: none; /* JS handles movement */
+}
+
+/* Wiggle when "No" dodges */
+.btn-no.wiggle {
+  animation: wiggle 0.3s ease;
+}
+@keyframes wiggle {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-8deg); }
+  50%  { transform: rotate(8deg); }
+  75%  { transform: rotate(-4deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Yes button grows over time */
+.btn-yes.grow-1 { font-size: 1.2rem; padding: 16px 40px; }
+.btn-yes.grow-2 { font-size: 1.35rem; padding: 18px 46px; }
+.btn-yes.grow-3 { font-size: 1.5rem; padding: 20px 52px; }
+.btn-yes.grow-4 { font-size: 1.7rem; padding: 22px 58px; }
+
+/* ─── Attempt counter ─── */
+.attempt-counter {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: var(--hot-pink);
+  opacity: 0.7;
+}
+
+/* ─── Success scene ─── */
+.success-scene {
+  text-align: center;
+  animation: successIn 0.8s ease-out both;
+}
+@keyframes successIn {
+  0%   { opacity: 0; transform: scale(0.5); }
+  60%  { transform: scale(1.06); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.success-title {
+  font-family: var(--font-hand);
+  font-size: 2.6rem;
+  color: var(--hot-pink);
+  text-shadow: 0 0 20px rgba(233, 30, 99, 0.4);
+  margin-bottom: 10px;
+}
+.success-sub {
+  font-size: 1.2rem;
+  color: var(--deep);
+}
+.success-sub.small {
+  font-size: 1rem;
+  margin-top: 6px;
+  opacity: 0.8;
+}
+
+/* ─── Utility ─── */
+.hidden { display: none !important; }
+
+/* ─── Responsive ─── */
+@media (max-width: 500px) {
+  .hero-card {
+    padding: 28px 20px 24px;
+    border-radius: 22px;
+  }
+  .prompt-text { font-size: 1.5rem; }
+  .btn { font-size: 1rem; padding: 12px 28px; }
+  .chibi { width: 75px; }
+  .chibi-svg-wide { width: 170px; }
+  .success-title { font-size: 2rem; }
+  .corner-doodle { font-size: 1.6rem; }
+}
+
+/* ─── Accessibility: prefers-reduced-motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  #tsparticles { display: none; }
+  .shimmer { display: none; }
+}
