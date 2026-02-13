@@ -1,0 +1,128 @@
+<svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" class="chibi-svg chibi-svg-wide">
+  <!-- Flat sticker style – matching Screenshot 2026-02-12 reference -->
+  <!-- Outline color: #3d2520 everywhere -->
+
+  <!-- ════════════════ YOU (left, centered x=120) ════════════════ -->
+
+  <!-- Afro puff bumps (behind main ellipse) -->
+  <circle cx="66" cy="54" r="16" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="174" cy="54" r="16" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="54" cy="78" r="14" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="186" cy="78" r="14" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="84" cy="22" r="15" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="120" cy="16" r="16" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="156" cy="22" r="15" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="68" cy="36" r="12" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="172" cy="36" r="12" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <!-- Main afro -->
+  <ellipse cx="120" cy="68" rx="63" ry="58" fill="#2a1f18" stroke="#3d2520" stroke-width="2.8"/>
+
+  <!-- Head -->
+  <ellipse cx="120" cy="90" rx="50" ry="52" fill="#8B5E3C" stroke="#3d2520" stroke-width="2.8"/>
+
+  <!-- Blush -->
+  <circle cx="84" cy="106" r="10" fill="#e8a0bf" opacity="0.5"/>
+  <circle cx="156" cy="106" r="10" fill="#e8a0bf" opacity="0.5"/>
+
+  <!-- Eyes -->
+  <g class="chibi-eyes">
+    <ellipse cx="102" cy="90" rx="10" ry="12" fill="#1a1208"/>
+    <circle cx="106" cy="85" r="3.8" fill="#fff"/>
+    <circle cx="99" cy="93" r="1.8" fill="#fff" opacity="0.4"/>
+
+    <ellipse cx="138" cy="90" rx="10" ry="12" fill="#1a1208"/>
+    <circle cx="142" cy="85" r="3.8" fill="#fff"/>
+    <circle cx="135" cy="93" r="1.8" fill="#fff" opacity="0.4"/>
+  </g>
+
+  <!-- Smile -->
+  <path d="M114 112 Q120 116 126 112" stroke="#3d2520" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Sweater -->
+  <rect x="86" y="140" width="68" height="56" rx="14" fill="#f48fb1" stroke="#3d2520" stroke-width="2.8" stroke-linejoin="round"/>
+  <path d="M104 140 L114 149 L120 145 L126 149 L136 140" fill="#f06292" stroke="#3d2520" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="120" y="178" text-anchor="middle" font-size="16" fill="#fff" opacity="0.85">♥</text>
+
+  <!-- Legs -->
+  <rect x="98" y="194" width="16" height="30" rx="8" fill="#8B5E3C" stroke="#3d2520" stroke-width="2.5"/>
+  <rect x="126" y="194" width="16" height="30" rx="8" fill="#8B5E3C" stroke="#3d2520" stroke-width="2.5"/>
+
+  <!-- Shoes -->
+  <ellipse cx="106" cy="226" rx="14" ry="7" fill="#e91e63" stroke="#3d2520" stroke-width="2.5"/>
+  <ellipse cx="134" cy="226" rx="14" ry="7" fill="#e91e63" stroke="#3d2520" stroke-width="2.5"/>
+
+  <!-- Left arm (at side) -->
+  <rect x="64" y="148" width="24" height="12" rx="6" fill="#f48fb1" stroke="#3d2520" stroke-width="2.5"/>
+  <circle cx="64" cy="155" r="7" fill="#8B5E3C" stroke="#3d2520" stroke-width="2"/>
+
+  <!-- ════════════════ ALLY (right, centered x=280) ════════════════ -->
+
+  <!-- Back hair -->
+  <rect x="224" y="52" width="112" height="170" rx="18" fill="#2a1f18" stroke="#3d2520" stroke-width="2.8"/>
+  <!-- Left hair curl -->
+  <path d="M224 200 L224 218 Q222 234 214 236 Q206 236 210 224 Q214 214 224 214"
+    fill="#2a1f18" stroke="#3d2520" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Right hair curl -->
+  <path d="M336 200 L336 218 Q338 234 346 236 Q354 236 350 224 Q346 214 336 214"
+    fill="#2a1f18" stroke="#3d2520" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Bangs -->
+  <path d="M228 62 C228 38 248 28 280 28 C312 28 332 38 332 62
+           C326 72 314 76 304 72 C294 68 288 74 280 72
+           C272 74 266 68 256 72 C246 76 234 72 228 62 Z"
+    fill="#2a1f18" stroke="#3d2520" stroke-width="2.8" stroke-linejoin="round"/>
+
+  <!-- Hair ribbon -->
+  <circle cx="330" cy="56" r="9" fill="#ff4081" stroke="#3d2520" stroke-width="2"/>
+  <circle cx="330" cy="56" r="5.5" fill="#ff80ab"/>
+
+  <!-- Head -->
+  <ellipse cx="280" cy="90" rx="50" ry="52" fill="#F5D0A9" stroke="#3d2520" stroke-width="2.8"/>
+
+  <!-- Blush -->
+  <circle cx="244" cy="106" r="10" fill="#f8b4c8" opacity="0.5"/>
+  <circle cx="316" cy="106" r="10" fill="#f8b4c8" opacity="0.5"/>
+
+  <!-- Eyes -->
+  <g class="chibi-eyes">
+    <ellipse cx="262" cy="90" rx="10" ry="12" fill="#1a1208"/>
+    <circle cx="266" cy="85" r="3.8" fill="#fff"/>
+    <circle cx="259" cy="93" r="1.8" fill="#fff" opacity="0.4"/>
+
+    <ellipse cx="298" cy="90" rx="10" ry="12" fill="#1a1208"/>
+    <circle cx="302" cy="85" r="3.8" fill="#fff"/>
+    <circle cx="295" cy="93" r="1.8" fill="#fff" opacity="0.4"/>
+  </g>
+
+  <!-- Smile -->
+  <path d="M274 112 Q280 116 286 112" stroke="#3d2520" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Sweater -->
+  <rect x="246" y="140" width="68" height="56" rx="14" fill="#ce93d8" stroke="#3d2520" stroke-width="2.8" stroke-linejoin="round"/>
+  <path d="M264 140 L274 149 L280 145 L286 149 L296 140" fill="#ba68c8" stroke="#3d2520" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="280" y="178" text-anchor="middle" font-size="16" fill="#fff" opacity="0.85">♥</text>
+
+  <!-- Legs -->
+  <rect x="258" y="194" width="16" height="30" rx="8" fill="#F5D0A9" stroke="#3d2520" stroke-width="2.5"/>
+  <rect x="286" y="194" width="16" height="30" rx="8" fill="#F5D0A9" stroke="#3d2520" stroke-width="2.5"/>
+
+  <!-- Shoes -->
+  <ellipse cx="266" cy="226" rx="14" ry="7" fill="#ab47bc" stroke="#3d2520" stroke-width="2.5"/>
+  <ellipse cx="294" cy="226" rx="14" ry="7" fill="#ab47bc" stroke="#3d2520" stroke-width="2.5"/>
+
+  <!-- Right arm (at side) -->
+  <rect x="312" y="148" width="24" height="12" rx="6" fill="#ce93d8" stroke="#3d2520" stroke-width="2.5"/>
+  <circle cx="336" cy="155" r="7" fill="#F5D0A9" stroke="#3d2520" stroke-width="2"/>
+
+  <!-- ════════════════ HOLDING HANDS ════════════════ -->
+  <!-- You's right arm reaching toward center -->
+  <rect x="152" y="150" width="44" height="12" rx="6" fill="#f48fb1" stroke="#3d2520" stroke-width="2.5"/>
+  <!-- Ally's left arm reaching toward center -->
+  <rect x="204" y="150" width="44" height="12" rx="6" fill="#ce93d8" stroke="#3d2520" stroke-width="2.5"/>
+  <!-- Clasped hands -->
+  <circle cx="198" cy="156" r="9" fill="#8B5E3C" stroke="#3d2520" stroke-width="2"/>
+  <circle cx="202" cy="156" r="9" fill="#F5D0A9" stroke="#3d2520" stroke-width="2"/>
+
+  <!-- Little heart above hands -->
+  <text x="200" y="142" text-anchor="middle" font-size="18" class="float-heart">❤️</text>
+</svg>

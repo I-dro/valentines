@@ -1,0 +1,69 @@
+<svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg" class="chibi-svg">
+  <!-- Flat sticker style – matching Screenshot 2026-02-12 reference -->
+  <!-- Outline color: #3d2520 everywhere, stroke-width ~2.8 -->
+
+  <!-- ===== LONG HAIR (behind everything) ===== -->
+  <!-- Main back hair panel -->
+  <rect x="44" y="52" width="112" height="170" rx="18" fill="#2a1f18" stroke="#3d2520" stroke-width="2.8"/>
+  <!-- Left hair curl at bottom -->
+  <path d="M44 200 L44 218 Q42 234 34 236 Q26 236 30 224 Q34 214 44 214"
+    fill="#2a1f18" stroke="#3d2520" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Right hair curl at bottom -->
+  <path d="M156 200 L156 218 Q158 234 166 236 Q174 236 170 224 Q166 214 156 214"
+    fill="#2a1f18" stroke="#3d2520" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- ===== BANGS (in front of forehead, behind eyes) ===== -->
+  <path d="M48 62 C48 38 68 28 100 28 C132 28 152 38 152 62
+           C146 72 134 76 124 72 C114 68 108 74 100 72
+           C92 74 86 68 76 72 C66 76 54 72 48 62 Z"
+    fill="#2a1f18" stroke="#3d2520" stroke-width="2.8" stroke-linejoin="round"/>
+
+  <!-- ===== HAIR RIBBON ===== -->
+  <circle cx="150" cy="56" r="9" fill="#ff4081" stroke="#3d2520" stroke-width="2"/>
+  <circle cx="150" cy="56" r="5.5" fill="#ff80ab"/>
+
+  <!-- ===== HEAD ===== -->
+  <ellipse cx="100" cy="90" rx="50" ry="52" fill="#F5D0A9" stroke="#3d2520" stroke-width="2.8"/>
+
+  <!-- ===== BLUSH ===== -->
+  <circle cx="64" cy="106" r="10" fill="#f8b4c8" opacity="0.5"/>
+  <circle cx="136" cy="106" r="10" fill="#f8b4c8" opacity="0.5"/>
+
+  <!-- ===== EYES (simple dark ovals + highlights) ===== -->
+  <g class="chibi-eyes">
+    <!-- Left eye -->
+    <ellipse cx="80" cy="90" rx="10" ry="12" fill="#1a1208"/>
+    <circle cx="84" cy="85" r="3.8" fill="#fff"/>
+    <circle cx="77" cy="93" r="1.8" fill="#fff" opacity="0.4"/>
+    <!-- Right eye -->
+    <ellipse cx="120" cy="90" rx="10" ry="12" fill="#1a1208"/>
+    <circle cx="124" cy="85" r="3.8" fill="#fff"/>
+    <circle cx="117" cy="93" r="1.8" fill="#fff" opacity="0.4"/>
+  </g>
+
+  <!-- ===== MOUTH (tiny, cute) ===== -->
+  <path d="M94 112 Q100 116 106 112" stroke="#3d2520" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- ===== BODY / SWEATER ===== -->
+  <rect x="66" y="140" width="68" height="56" rx="14" fill="#ce93d8" stroke="#3d2520" stroke-width="2.8" stroke-linejoin="round"/>
+  <!-- Collar -->
+  <path d="M84 140 L94 149 L100 145 L106 149 L116 140" fill="#ba68c8" stroke="#3d2520" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Heart on sweater -->
+  <text x="100" y="178" text-anchor="middle" font-size="16" fill="#fff" opacity="0.85">♥</text>
+
+  <!-- ===== LEGS ===== -->
+  <rect x="78" y="194" width="16" height="30" rx="8" fill="#F5D0A9" stroke="#3d2520" stroke-width="2.5"/>
+  <rect x="106" y="194" width="16" height="30" rx="8" fill="#F5D0A9" stroke="#3d2520" stroke-width="2.5"/>
+
+  <!-- ===== SHOES ===== -->
+  <ellipse cx="86" cy="226" rx="14" ry="7" fill="#ab47bc" stroke="#3d2520" stroke-width="2.5"/>
+  <ellipse cx="114" cy="226" rx="14" ry="7" fill="#ab47bc" stroke="#3d2520" stroke-width="2.5"/>
+
+  <!-- ===== ARMS ===== -->
+  <!-- Left arm -->
+  <rect x="44" y="148" width="24" height="12" rx="6" fill="#ce93d8" stroke="#3d2520" stroke-width="2.5"/>
+  <circle cx="44" cy="155" r="7" fill="#F5D0A9" stroke="#3d2520" stroke-width="2"/>
+  <!-- Right arm -->
+  <rect x="132" y="148" width="24" height="12" rx="6" fill="#ce93d8" stroke="#3d2520" stroke-width="2.5"/>
+  <circle cx="156" cy="155" r="7" fill="#F5D0A9" stroke="#3d2520" stroke-width="2"/>
+</svg>

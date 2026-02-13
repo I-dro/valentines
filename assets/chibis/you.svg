@@ -1,0 +1,77 @@
+<svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg" class="chibi-svg">
+  <!-- Flat sticker style – matching Screenshot 2026-02-12 reference -->
+  <!-- Outline color: #3d2520 everywhere, stroke-width ~2.8 -->
+
+  <!-- ===== AFRO HAIR ===== -->
+  <!-- Puff bumps (drawn first so main ellipse covers interior overlap) -->
+  <circle cx="46" cy="54" r="16" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="154" cy="54" r="16" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="34" cy="78" r="14" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="166" cy="78" r="14" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="64" cy="22" r="15" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="100" cy="16" r="16" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="136" cy="22" r="15" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="48" cy="36" r="12" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <circle cx="152" cy="36" r="12" fill="#2a1f18" stroke="#3d2520" stroke-width="2.2"/>
+  <!-- Main afro shape (on top, hides interior bump-stroke overlap) -->
+  <ellipse cx="100" cy="68" rx="63" ry="58" fill="#2a1f18" stroke="#3d2520" stroke-width="2.8"/>
+
+  <!-- ===== HEAD ===== -->
+  <ellipse cx="100" cy="90" rx="50" ry="52" fill="#8B5E3C" stroke="#3d2520" stroke-width="2.8"/>
+
+  <!-- ===== BLUSH ===== -->
+  <circle cx="64" cy="106" r="10" fill="#e8a0bf" opacity="0.5"/>
+  <circle cx="136" cy="106" r="10" fill="#e8a0bf" opacity="0.5"/>
+
+  <!-- ===== EYES (simple dark ovals + highlights) ===== -->
+  <g class="chibi-eyes" id="you-eyes">
+    <!-- Left eye -->
+    <ellipse cx="80" cy="90" rx="10" ry="12" fill="#1a1208"/>
+    <circle cx="84" cy="85" r="3.8" fill="#fff" class="eye-sparkle" id="you-sparkle-l"/>
+    <circle cx="77" cy="93" r="1.8" fill="#fff" opacity="0.4"/>
+    <!-- Right eye -->
+    <ellipse cx="120" cy="90" rx="10" ry="12" fill="#1a1208"/>
+    <circle cx="124" cy="85" r="3.8" fill="#fff" class="eye-sparkle" id="you-sparkle-r"/>
+    <circle cx="117" cy="93" r="1.8" fill="#fff" opacity="0.4"/>
+  </g>
+
+  <!-- Sad eyebrows (hidden by default) -->
+  <line id="you-brow-l" x1="70" y1="78" x2="90" y2="76" stroke="#3d2520" stroke-width="2.8" stroke-linecap="round" opacity="0"/>
+  <line id="you-brow-r" x1="130" y1="78" x2="110" y2="76" stroke="#3d2520" stroke-width="2.8" stroke-linecap="round" opacity="0"/>
+
+  <!-- ===== MOUTH (tiny, cute – JS swaps d for sadness) ===== -->
+  <path id="you-mouth" d="M94 112 Q100 116 106 112" stroke="#3d2520" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- ===== TEARS (hidden by default) ===== -->
+  <g id="you-tears" opacity="0">
+    <ellipse cx="68" cy="100" rx="3" ry="5.5" fill="#64b5f6" opacity="0.8"/>
+    <ellipse cx="132" cy="100" rx="3" ry="5.5" fill="#64b5f6" opacity="0.8"/>
+    <ellipse cx="66" cy="112" rx="2.5" ry="3.5" fill="#64b5f6" opacity="0.5"/>
+    <ellipse cx="134" cy="112" rx="2.5" ry="3.5" fill="#64b5f6" opacity="0.5"/>
+  </g>
+
+  <!-- ===== BODY / SWEATER ===== -->
+  <rect x="66" y="140" width="68" height="56" rx="14" fill="#f48fb1" stroke="#3d2520" stroke-width="2.8" stroke-linejoin="round"/>
+  <!-- Collar -->
+  <path d="M84 140 L94 149 L100 145 L106 149 L116 140" fill="#f06292" stroke="#3d2520" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Heart on sweater -->
+  <text x="100" y="178" text-anchor="middle" font-size="16" fill="#fff" opacity="0.85">♥</text>
+
+  <!-- ===== LEGS ===== -->
+  <rect x="78" y="194" width="16" height="30" rx="8" fill="#8B5E3C" stroke="#3d2520" stroke-width="2.5"/>
+  <rect x="106" y="194" width="16" height="30" rx="8" fill="#8B5E3C" stroke="#3d2520" stroke-width="2.5"/>
+
+  <!-- ===== SHOES ===== -->
+  <ellipse cx="86" cy="226" rx="14" ry="7" fill="#e91e63" stroke="#3d2520" stroke-width="2.5"/>
+  <ellipse cx="114" cy="226" rx="14" ry="7" fill="#e91e63" stroke="#3d2520" stroke-width="2.5"/>
+
+  <!-- ===== LEFT ARM (static) ===== -->
+  <rect x="44" y="148" width="24" height="12" rx="6" fill="#f48fb1" stroke="#3d2520" stroke-width="2.5"/>
+  <circle cx="44" cy="155" r="7" fill="#8B5E3C" stroke="#3d2520" stroke-width="2"/>
+
+  <!-- ===== RIGHT ARM (waving) ===== -->
+  <g class="wave-arm" style="transform-origin: 134px 152px;">
+    <rect x="132" y="146" width="28" height="12" rx="6" fill="#f48fb1" stroke="#3d2520" stroke-width="2.5"/>
+    <circle cx="162" cy="146" r="8" fill="#8B5E3C" stroke="#3d2520" stroke-width="2"/>
+  </g>
+</svg>

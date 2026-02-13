@@ -29,9 +29,9 @@ body {
   font-family: var(--font-main);
   color: var(--deep);
   overflow: hidden;
-  background: linear-gradient(-45deg, #fce4ec, #f8bbd0, #e1bee7, #f3e5f5, #ffe0b2, #f8bbd0);
+  background: linear-gradient(-45deg, #fef0f4, #fce4ec, #f3e5f5, #faf5fc, #fff3e0, #fce4ec);
   background-size: 400% 400%;
-  animation: gradientShift 16s ease infinite;
+  animation: gradientShift 24s ease infinite;
 }
 
 @keyframes gradientShift {
@@ -51,11 +51,11 @@ body {
 /* ─── Layer 3: Corner doodles ─── */
 .corner-doodle {
   position: fixed;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   z-index: 1;
   animation: doodleBob 3s ease-in-out infinite;
   pointer-events: none;
-  opacity: 0.7;
+  opacity: 0.4;
 }
 .top-left     { top: 18px;  left: 18px;  animation-delay: 0s; }
 .top-right    { top: 18px;  right: 18px; animation-delay: 0.6s; }
@@ -79,13 +79,13 @@ body {
 .trail-particle {
   position: absolute;
   pointer-events: none;
-  font-size: 1rem;
-  animation: trailFade 0.8s ease-out forwards;
+  font-size: 0.7rem;
+  animation: trailFade 0.7s ease-out forwards;
   z-index: 2;
 }
 @keyframes trailFade {
-  0%   { opacity: 1; transform: scale(1) translateY(0); }
-  100% { opacity: 0; transform: scale(0.3) translateY(-30px); }
+  0%   { opacity: 0.65; transform: scale(1) translateY(0); }
+  100% { opacity: 0; transform: scale(0.3) translateY(-28px); }
 }
 
 /* ─── Main scene ─── */
@@ -395,7 +395,7 @@ body {
   .chibi { width: 75px; }
   .chibi-svg-wide { width: 170px; }
   .success-title { font-size: 2rem; }
-  .corner-doodle { font-size: 1.6rem; }
+  .corner-doodle { font-size: 1.2rem; }
 }
 
 /* ─── Accessibility: prefers-reduced-motion ─── */

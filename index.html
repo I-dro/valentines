@@ -40,160 +40,17 @@
     <!-- Chibi characters -->
     <div class="chibi-container" id="chibi-container">
       <div class="chibi chibi-you" id="chibi-you">
-        <!-- Inline SVG: Black guy with afro, cozy sweater, waving -->
-        <svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg" class="chibi-svg">
-          <!-- Afro hair (big round poof) -->
-          <ellipse cx="100" cy="68" rx="62" ry="58" fill="#1a1a2e"/>
-          <!-- Head -->
-          <ellipse cx="100" cy="90" rx="44" ry="46" fill="#8B5E3C"/>
-          <!-- Blush cheeks -->
-          <ellipse cx="72" cy="102" rx="10" ry="6" fill="#e8a0bf" opacity="0.6"/>
-          <ellipse cx="128" cy="102" rx="10" ry="6" fill="#e8a0bf" opacity="0.6"/>
-          <!-- Eyes -->
-          <g class="chibi-eyes" id="you-eyes">
-            <ellipse cx="82" cy="88" rx="6" ry="7" fill="#1a1a2e"/>
-            <ellipse cx="118" cy="88" rx="6" ry="7" fill="#1a1a2e"/>
-            <!-- Eye sparkle -->
-            <circle cx="84" cy="86" r="2.5" fill="#fff" class="eye-sparkle" id="you-sparkle-l"/>
-            <circle cx="120" cy="86" r="2.5" fill="#fff" class="eye-sparkle" id="you-sparkle-r"/>
-          </g>
-          <!-- Sad eyebrows (hidden by default) -->
-          <line id="you-brow-l" x1="74" y1="78" x2="88" y2="76" stroke="#1a1a2e" stroke-width="2.5" stroke-linecap="round" opacity="0"/>
-          <line id="you-brow-r" x1="126" y1="78" x2="112" y2="76" stroke="#1a1a2e" stroke-width="2.5" stroke-linecap="round" opacity="0"/>
-          <!-- Mouth (changes with sadness) -->
-          <path id="you-mouth" d="M90 108 Q100 118 110 108" stroke="#1a1a2e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <!-- Tears (hidden by default) -->
-          <g id="you-tears" opacity="0">
-            <ellipse cx="76" cy="98" rx="3" ry="5" fill="#64b5f6" opacity="0.8"/>
-            <ellipse cx="124" cy="98" rx="3" ry="5" fill="#64b5f6" opacity="0.8"/>
-            <ellipse cx="74" cy="108" rx="2" ry="3" fill="#64b5f6" opacity="0.5"/>
-            <ellipse cx="126" cy="108" rx="2" ry="3" fill="#64b5f6" opacity="0.5"/>
-          </g>
-          <!-- Body / cozy sweater -->
-          <rect x="64" y="136" width="72" height="70" rx="18" fill="#f48fb1"/>
-          <!-- Heart on sweater -->
-          <text x="100" y="178" text-anchor="middle" font-size="22" fill="#fff" opacity="0.85">♥</text>
-          <!-- Legs -->
-          <rect x="74" y="200" width="20" height="36" rx="10" fill="#8B5E3C"/>
-          <rect x="106" y="200" width="20" height="36" rx="10" fill="#8B5E3C"/>
-          <!-- Shoes -->
-          <ellipse cx="84" cy="238" rx="14" ry="8" fill="#e91e63"/>
-          <ellipse cx="116" cy="238" rx="14" ry="8" fill="#e91e63"/>
-          <!-- Left arm (static) -->
-          <rect x="40" y="144" width="26" height="14" rx="7" fill="#f48fb1"/>
-          <!-- Right arm (waving) — group pivots at shoulder -->
-          <g class="wave-arm" style="transform-origin: 136px 148px;">
-            <rect x="134" y="140" width="32" height="14" rx="7" fill="#f48fb1"/>
-            <!-- Hand -->
-            <circle cx="168" cy="140" r="10" fill="#8B5E3C"/>
-          </g>
-        </svg>
+        <!-- Loaded from assets/chibis/you.svg -->
       </div>
 
       <div class="chibi chibi-ally" id="chibi-ally">
-        <!-- Inline SVG: Asian girl with long straight hair, cozy sweater, idle -->
-        <svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg" class="chibi-svg">
-          <!-- Long straight hair (behind) -->
-          <rect x="52" y="56" width="96" height="140" rx="24" fill="#1a1a2e"/>
-          <!-- Hair bangs -->
-          <ellipse cx="100" cy="62" rx="50" ry="34" fill="#1a1a2e"/>
-          <!-- Head -->
-          <ellipse cx="100" cy="90" rx="44" ry="46" fill="#F5D0A9"/>
-          <!-- Blush cheeks -->
-          <ellipse cx="72" cy="102" rx="10" ry="6" fill="#f8b4c8" opacity="0.6"/>
-          <ellipse cx="128" cy="102" rx="10" ry="6" fill="#f8b4c8" opacity="0.6"/>
-          <!-- Eyes -->
-          <g class="chibi-eyes">
-            <ellipse cx="82" cy="88" rx="6" ry="7" fill="#3e2723"/>
-            <ellipse cx="118" cy="88" rx="6" ry="7" fill="#3e2723"/>
-            <!-- Eye sparkle -->
-            <circle cx="84" cy="86" r="2.5" fill="#fff"/>
-            <circle cx="120" cy="86" r="2.5" fill="#fff"/>
-          </g>
-          <!-- Happy mouth -->
-          <path d="M90 108 Q100 118 110 108" stroke="#5d4037" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <!-- Body / cozy sweater -->
-          <rect x="64" y="136" width="72" height="70" rx="18" fill="#ce93d8"/>
-          <!-- Heart on sweater -->
-          <text x="100" y="178" text-anchor="middle" font-size="22" fill="#fff" opacity="0.85">♥</text>
-          <!-- Legs -->
-          <rect x="74" y="200" width="20" height="36" rx="10" fill="#F5D0A9"/>
-          <rect x="106" y="200" width="20" height="36" rx="10" fill="#F5D0A9"/>
-          <!-- Shoes -->
-          <ellipse cx="84" cy="238" rx="14" ry="8" fill="#ab47bc"/>
-          <ellipse cx="116" cy="238" rx="14" ry="8" fill="#ab47bc"/>
-          <!-- Arms (idle, at sides) -->
-          <rect x="40" y="144" width="26" height="14" rx="7" fill="#ce93d8"/>
-          <rect x="134" y="144" width="26" height="14" rx="7" fill="#ce93d8"/>
-        </svg>
+        <!-- Loaded from assets/chibis/ally.svg -->
       </div>
     </div>
 
     <!-- Holding-hands scene (hidden until Yes) -->
     <div class="chibi-container chibi-together hidden" id="chibi-together">
-      <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" class="chibi-svg chibi-svg-wide">
-        <!-- ===== YOU (left) ===== -->
-        <!-- Afro -->
-        <ellipse cx="120" cy="68" rx="62" ry="58" fill="#1a1a2e"/>
-        <!-- Head -->
-        <ellipse cx="120" cy="90" rx="44" ry="46" fill="#8B5E3C"/>
-        <!-- Blush -->
-        <ellipse cx="92" cy="102" rx="10" ry="6" fill="#e8a0bf" opacity="0.6"/>
-        <ellipse cx="148" cy="102" rx="10" ry="6" fill="#e8a0bf" opacity="0.6"/>
-        <!-- Eyes -->
-        <ellipse cx="104" cy="88" rx="6" ry="7" fill="#1a1a2e"/>
-        <ellipse cx="136" cy="88" rx="6" ry="7" fill="#1a1a2e"/>
-        <circle cx="106" cy="86" r="2.5" fill="#fff"/>
-        <circle cx="138" cy="86" r="2.5" fill="#fff"/>
-        <!-- Smile -->
-        <path d="M110 108 Q120 120 130 108" stroke="#1a1a2e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <!-- Sweater -->
-        <rect x="84" y="136" width="72" height="70" rx="18" fill="#f48fb1"/>
-        <text x="120" y="178" text-anchor="middle" font-size="22" fill="#fff" opacity="0.85">♥</text>
-        <!-- Legs -->
-        <rect x="94" y="200" width="20" height="36" rx="10" fill="#8B5E3C"/>
-        <rect x="126" y="200" width="20" height="36" rx="10" fill="#8B5E3C"/>
-        <ellipse cx="104" cy="238" rx="14" ry="8" fill="#e91e63"/>
-        <ellipse cx="136" cy="238" rx="14" ry="8" fill="#e91e63"/>
-        <!-- Left arm -->
-        <rect x="58" y="144" width="28" height="14" rx="7" fill="#f48fb1"/>
-
-        <!-- ===== ALLY (right) ===== -->
-        <!-- Long hair -->
-        <rect x="232" y="56" width="96" height="140" rx="24" fill="#1a1a2e"/>
-        <ellipse cx="280" cy="62" rx="50" ry="34" fill="#1a1a2e"/>
-        <!-- Head -->
-        <ellipse cx="280" cy="90" rx="44" ry="46" fill="#F5D0A9"/>
-        <!-- Blush -->
-        <ellipse cx="252" cy="102" rx="10" ry="6" fill="#f8b4c8" opacity="0.6"/>
-        <ellipse cx="308" cy="102" rx="10" ry="6" fill="#f8b4c8" opacity="0.6"/>
-        <!-- Eyes -->
-        <ellipse cx="264" cy="88" rx="6" ry="7" fill="#3e2723"/>
-        <ellipse cx="296" cy="88" rx="6" ry="7" fill="#3e2723"/>
-        <circle cx="266" cy="86" r="2.5" fill="#fff"/>
-        <circle cx="298" cy="86" r="2.5" fill="#fff"/>
-        <!-- Smile -->
-        <path d="M270 108 Q280 120 290 108" stroke="#5d4037" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <!-- Sweater -->
-        <rect x="244" y="136" width="72" height="70" rx="18" fill="#ce93d8"/>
-        <text x="280" y="178" text-anchor="middle" font-size="22" fill="#fff" opacity="0.85">♥</text>
-        <!-- Legs -->
-        <rect x="254" y="200" width="20" height="36" rx="10" fill="#F5D0A9"/>
-        <rect x="286" y="200" width="20" height="36" rx="10" fill="#F5D0A9"/>
-        <ellipse cx="264" cy="238" rx="14" ry="8" fill="#ab47bc"/>
-        <ellipse cx="296" cy="238" rx="14" ry="8" fill="#ab47bc"/>
-        <!-- Right arm -->
-        <rect x="314" y="144" width="28" height="14" rx="7" fill="#ce93d8"/>
-
-        <!-- ===== Holding hands (connected arms in center) ===== -->
-        <rect x="154" y="148" width="40" height="14" rx="7" fill="#f48fb1"/>
-        <rect x="206" y="148" width="40" height="14" rx="7" fill="#ce93d8"/>
-        <!-- Hands clasped -->
-        <circle cx="197" cy="155" r="12" fill="#8B5E3C"/>
-        <circle cx="203" cy="155" r="12" fill="#F5D0A9"/>
-        <!-- Little heart above hands -->
-        <text x="200" y="140" text-anchor="middle" font-size="20" class="float-heart">❤️</text>
-      </svg>
+      <!-- Loaded from assets/chibis/together.svg -->
     </div>
 
     <!-- ═══════════════ Hero card ═══════════════ -->

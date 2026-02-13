@@ -56,28 +56,28 @@
       fullScreen: false,
       fpsLimit: 60,
       particles: {
-        number: { value: 45, density: { enable: true, area: 900 } },
+        number: { value: 22, density: { enable: true, area: 900 } },
         color: { value: ["#f48fb1", "#e91e63", "#ce93d8", "#f8bbd0", "#ff80ab"] },
         shape: {
           type: ["heart", "circle"],
         },
         opacity: {
-          value: { min: 0.3, max: 0.8 },
-          animation: { enable: true, speed: 0.6, minimumValue: 0.2, sync: false },
+          value: { min: 0.15, max: 0.5 },
+          animation: { enable: true, speed: 0.5, minimumValue: 0.1, sync: false },
         },
         size: {
-          value: { min: 6, max: 18 },
-          animation: { enable: true, speed: 2, minimumValue: 4, sync: false },
+          value: { min: 4, max: 14 },
+          animation: { enable: true, speed: 1.5, minimumValue: 3, sync: false },
         },
         move: {
           enable: true,
-          speed: { min: 0.4, max: 1.2 },
+          speed: { min: 0.3, max: 0.8 },
           direction: "top",
           outModes: { default: "out" },
-          drift: { min: -0.6, max: 0.6 },
+          drift: { min: -0.4, max: 0.4 },
         },
-        wobble: { enable: true, distance: 8, speed: 4 },
-        tilt: { enable: true, direction: "random", value: { min: 0, max: 360 }, animation: { enable: true, speed: 6 } },
+        wobble: { enable: true, distance: 6, speed: 3 },
+        tilt: { enable: true, direction: "random", value: { min: 0, max: 360 }, animation: { enable: true, speed: 4 } },
       },
       detectRetina: true,
     });
@@ -91,7 +91,7 @@
 
   function spawnTrail(x, y) {
     const now = Date.now();
-    if (now - trailThrottle < 50) return;
+    if (now - trailThrottle < 80) return;
     trailThrottle = now;
 
     const el = document.createElement("span");
@@ -360,15 +360,19 @@
     velY += Math.sin(angle) * 50;
   });
 
-  // ───────── Chibi sadness refs ─────────
-  const youMouth    = document.getElementById("you-mouth");
-  const youTears    = document.getElementById("you-tears");
-  const youBrowL    = document.getElementById("you-brow-l");
-  const youBrowR    = document.getElementById("you-brow-r");
-  const youSparkleL = document.getElementById("you-sparkle-l");
-  const youSparkleR = document.getElementById("you-sparkle-r");
-  const youEyes     = document.getElementById("you-eyes");
-  const waveArm     = chibiYou ? chibiYou.querySelector(".wave-arm") : null;
+  // ───────── Chibi sadness refs (bound after SVG injection) ─────────
+  let youMouth, youTears, youBrowL, youBrowR, youSparkleL, youSparkleR, youEyes, waveArm;
+
+  function bindChibiRefs() {
+    youMouth    = document.getElementById("you-mouth");
+    youTears    = document.getElementById("you-tears");
+    youBrowL    = document.getElementById("you-brow-l");
+    youBrowR    = document.getElementById("you-brow-r");
+    youSparkleL = document.getElementById("you-sparkle-l");
+    youSparkleR = document.getElementById("you-sparkle-r");
+    youEyes     = document.getElementById("you-eyes");
+    waveArm     = chibiYou ? chibiYou.querySelector(".wave-arm") : null;
+  }
 
   /**
    * Sadness levels based on noAttempts:
@@ -561,7 +565,27 @@
   }
 
   // ═══════════════════════════════════════════════════
+  //  SVG loading — fetch chibi art and inject inline
+  // ═══════════════════════════════════════════════════
+  async function loadSVGs() {
+    const slots = [
+      { el: chibiYou, src: "assets/chibis/you.svg" },
+      { el: chibiAlly, src: "assets/chibis/ally.svg" },
+      { el: chibiTogether, src: "assets/chibis/together.svg" },
+    ];
+    await Promise.all(slots.map(async ({ el, src }) => {
+      try {
+        const resp = await fetch(src);
+        if (resp.ok) el.innerHTML = await resp.text();
+      } catch (e) {
+        console.warn("Could not load chibi SVG:", src, e);
+      }
+    }));
+  }
+
+  // ═══════════════════════════════════════════════════
   //  Init
   // ═══════════════════════════════════════════════════
   initParticles();
+  loadSVGs().then(bindChibiRefs);
 })();
