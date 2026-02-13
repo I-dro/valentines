@@ -140,6 +140,8 @@ body {
 /* Blink animation on eyes */
 .chibi-eyes {
   animation: blink 4s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
 }
 @keyframes blink {
   0%, 92%, 100% { transform: scaleY(1); }

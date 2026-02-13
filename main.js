@@ -360,19 +360,15 @@
     velY += Math.sin(angle) * 50;
   });
 
-  // ───────── Chibi sadness refs (bound after SVG injection) ─────────
-  let youMouth, youTears, youBrowL, youBrowR, youSparkleL, youSparkleR, youEyes, waveArm;
-
-  function bindChibiRefs() {
-    youMouth    = document.getElementById("you-mouth");
-    youTears    = document.getElementById("you-tears");
-    youBrowL    = document.getElementById("you-brow-l");
-    youBrowR    = document.getElementById("you-brow-r");
-    youSparkleL = document.getElementById("you-sparkle-l");
-    youSparkleR = document.getElementById("you-sparkle-r");
-    youEyes     = document.getElementById("you-eyes");
-    waveArm     = chibiYou ? chibiYou.querySelector(".wave-arm") : null;
-  }
+  // ───────── Chibi sadness refs ─────────
+  const youMouth    = document.getElementById("you-mouth");
+  const youTears    = document.getElementById("you-tears");
+  const youBrowL    = document.getElementById("you-brow-l");
+  const youBrowR    = document.getElementById("you-brow-r");
+  const youSparkleL = document.getElementById("you-sparkle-l");
+  const youSparkleR = document.getElementById("you-sparkle-r");
+  const youEyes     = document.getElementById("you-eyes");
+  const waveArm     = chibiYou ? chibiYou.querySelector(".wave-arm") : null;
 
   /**
    * Sadness levels based on noAttempts:
@@ -565,27 +561,7 @@
   }
 
   // ═══════════════════════════════════════════════════
-  //  SVG loading — fetch chibi art and inject inline
-  // ═══════════════════════════════════════════════════
-  async function loadSVGs() {
-    const slots = [
-      { el: chibiYou, src: "assets/chibis/you.svg" },
-      { el: chibiAlly, src: "assets/chibis/ally.svg" },
-      { el: chibiTogether, src: "assets/chibis/together.svg" },
-    ];
-    await Promise.all(slots.map(async ({ el, src }) => {
-      try {
-        const resp = await fetch(src);
-        if (resp.ok) el.innerHTML = await resp.text();
-      } catch (e) {
-        console.warn("Could not load chibi SVG:", src, e);
-      }
-    }));
-  }
-
-  // ═══════════════════════════════════════════════════
   //  Init
   // ═══════════════════════════════════════════════════
   initParticles();
-  loadSVGs().then(bindChibiRefs);
 })();
